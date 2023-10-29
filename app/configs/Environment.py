@@ -6,7 +6,12 @@ from pydantic_settings import BaseSettings
 class EnvironmentSettings(BaseSettings):
     API_VERSION: str
     APP_NAME: str
+    OTP_ORIGIN_NUMBER: str
     DATABASE_CONNECTION_STRING: str
+    AWS_REGION_NAME: str
+    AWS_ACCESS_KEY: str
+    AWS_PRIVATE_KEY: str
+    AWS_APPLICATION_ID: str
 
     class Config:
         env_file = ".env"
