@@ -13,6 +13,8 @@ class EnvironmentSettings(BaseSettings):
     AWS_PRIVATE_KEY: str
     AWS_APPLICATION_ID: str
 
+    JWT_SECRET: str
+
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"

@@ -2,6 +2,7 @@ from beanie import init_beanie
 from motor.motor_asyncio import AsyncIOMotorClient
 
 from app.configs.Environment import get_environment_variables
+from app.models.Group import Group, Member
 from app.models.User import User
 
 env = get_environment_variables()
@@ -14,6 +15,7 @@ async def init_database():
     await init_beanie(
         database=client.Appelada,
         document_models=[
-            User
+            User,
+            Group,
         ]
     )
